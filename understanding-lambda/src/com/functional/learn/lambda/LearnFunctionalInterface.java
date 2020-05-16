@@ -1,4 +1,4 @@
-package com.functional.learn;
+package com.functional.learn.lambda;
 
 @FunctionalInterface // Just to ensure it is functional, no one adds more methods to it
 public interface LearnFunctionalInterface {

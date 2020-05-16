@@ -1,4 +1,4 @@
-package com.functional.learn;
+package com.functional.learn.lambda;
 
 public class LambdaExample1 {
 
@@ -6,10 +6,9 @@ public class LambdaExample1 {
 	// Class
 	public static void main(String[] args) {
 		// Lengthy code just to execute one single thread.
-		/*
-		 * FirstRunnable runnable = new FirstRunnable(); Thread t = new
-		 * Thread(runnable); t.start();
-		 */
+		FirstRunnable runnable = new FirstRunnable();
+		Thread t1 = new Thread(runnable);
+		t1.start();
 
 		// Anonymous Inner Class, More concise than the previous way.
 		Thread t = new Thread(new Runnable() {
@@ -57,8 +56,9 @@ public class LambdaExample1 {
 			System.out.println("Lambda Thread Executed!");
 		});
 		lambdaThread.start();
-		
-		//We can only convert lambdas for the interfaces that have only one abstract method
+
+		// We can only convert lambdas for the interfaces that have only one abstract
+		// method
 
 	}
 

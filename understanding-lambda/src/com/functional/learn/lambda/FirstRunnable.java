@@ -1,4 +1,4 @@
-package com.functional.learn;
+package com.functional.learn.lambda;
 
 public class FirstRunnable implements Runnable {
 

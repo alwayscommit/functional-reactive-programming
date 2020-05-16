@@ -1,26 +1,27 @@
-package com.functional.learn;
+package com.functional.learn.lambda;
 
 public class LambdaUnderTheHood {
 
 	public static void main(String[] args) {
 
-		/*
-		 * LearnFunctionalInterface fun = new LearnFunctionalInterface() {
-		 * 
-		 * @Override public void functionalMethod() {
-		 * System.out.println("Implementation 1"); } }; // LambdaUnderTheHood$1.class
-		 * 
-		 * LearnFunctionalInterface fun2 = new LearnFunctionalInterface() {
-		 * 
-		 * @Override public void functionalMethod() {
-		 * System.out.println("Implementation 2"); } }; // LambdaUnderTheHood$2.class
-		 * 
-		 * // Two class files get created for the anonymous inner classes // bulky jar
-		 * files
-		 * 
-		 */
+		LearnFunctionalInterface fun = new LearnFunctionalInterface() {
+			@Override
+			public void functionalMethod() {
+				System.out.println("Implementation 1");
+			}
+		}; // LambdaUnderTheHood$1.class
 
-		LearnFunctionalInterface fun = () -> System.out.println("I am lightweight");
+		LearnFunctionalInterface fun2 = new LearnFunctionalInterface() {
+			@Override
+			public void functionalMethod() {
+				System.out.println("Implementation 2");
+			}
+		}; // LambdaUnderTheHood$2.class
+
+		// Two class files get created for the anonymous inner classes // bulky jar
+		// files
+
+		LearnFunctionalInterface fun3 = () -> System.out.println("I am lightweight");
 		// LambdaUnderTheHood$1.class, LambdaUnderTheHood$2.class disappear from bin
 		// folder
 
@@ -41,9 +42,11 @@ public class LambdaUnderTheHood {
 
 //InvokeDynamic is a bytecode instruction that facilitates the implementation of dynamic languages through dynamic method invocation
 //InvokeDynamic is a benefit for statically typed language like Java
-		//functionalMethod implementation is not present at compile time, but at runtime using lambda
-		//Lambdas: smart anonymous functions, Type Inference, InvokeDynamic Functionality
-		//Optimize memory
+		// functionalMethod implementation is not present at compile time, but at
+		// runtime using lambda
+		// Lambdas: smart anonymous functions, Type Inference, InvokeDynamic
+		// Functionality
+		// Optimize memory
 	}
 
 }
